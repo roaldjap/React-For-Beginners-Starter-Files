@@ -4,12 +4,13 @@ import { getFunName } from "../helpers";
 class StorePicker extends React.Component {
   constructor() {
     super();
+    // Only do this if you have React.Fragment
     this.myInput = React.createRef();
   }
 
   goToStore = event => {
     // Prvent from submitting
-    event.preventDefault(); 
+    event.preventDefault();
     // Get the text from the input
     const storeName = this.myInput.current.value;
     // Change the page to /store/whatever-they-entered
